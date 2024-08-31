@@ -1,22 +1,22 @@
-import { resolve } from "node:path";
-import { defineConfig } from "vite";
+import { resolve } from 'node:path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/main.js"),
-      name: "QuazalaRouter",
+      entry: resolve(__dirname, 'src/main.js'),
+      name: 'QuazalaRouter',
       fileName: (format) => `main.${format}.js`,
-      formats: ["es", "cjs"],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: [/^node:/, "events", "stream", "path", "ws"],
+      external: [/^node:/, 'events', 'stream', 'path', 'ws'],
     },
-    target: "node18",
+    target: 'node18',
     minify: false,
   },
   test: {
     globals: true,
-    environment: "node",
+    environment: 'node',
   },
 });

@@ -1,1 +1,1 @@
-export class Router {}
+export { Router } from './router';
