@@ -10,7 +10,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: [/^node:/, 'events', 'stream', 'path', 'ws'],
+      external: [/^node:/, 'events', 'stream', 'path'],
     },
     target: 'node18',
     minify: false,
